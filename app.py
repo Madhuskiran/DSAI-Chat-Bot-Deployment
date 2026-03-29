@@ -10,7 +10,9 @@ from langchain_community.vectorstores import FAISS
 from langchain_groq import ChatGroq
 
 # Load API key
-api_key = st.secrets["GROQ_API_KEY"]
+load_dotenv()
+api_key = os.getenv("GROQ_API_KEY")
+#print("API KEY:", api_key)
 
 st.title("RAG Chatbot with Groq")
 
